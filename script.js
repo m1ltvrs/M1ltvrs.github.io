@@ -89,5 +89,29 @@ songBtns.forEach(btn => {
         audio.src = song;
         audio.load();
         audio.play().catch(e => console.log('Play error:', e));
+        // Playlist song switching
+const audio = document.getElementById('audio');
+const songButtons = document.querySelectorAll('.song-btn');
+
+songButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const songFile = button.getAttribute('data-song');
+        
+        // Remove active class from all buttons, add to the clicked one
+        songButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        // Change song and play it
+        audio.src = songFile;
+        audio.play().catch(error => {
+            console.log("Playback failed:", error);
+        });
     });
 });
+
+// Optional: make "Funk do Die" look selected when page loads (since it's currently playing)
+songButtons.forEach(btn => btn.classList.remove('active'));
+songButtons[songButtons.length - 1].classList.add('active');   // last button = Funk do Die
+    });
+});
+
