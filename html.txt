@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Turner - Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="snow"></canvas>
+    
+    <div class="container">
+        <div class="card">
+            <img src="quizzard-logo.png" alt="Quizzard Logo" class="logo">
+            
+            <h1>Richard Turner</h1>
+            
+            <div class="info">
+                <p>🔹 Full-Stack Developer specializing in .NET & React</p>
+                <p>🔹 Building C2C platforms and real-world projects</p>
+                <p>🔹 Active on LinkedIn with 13+ professional connections</p>
+                <p>🔹 16 years old, grinding every day</p>
+                <p>🔹 Turned rejection into motivation</p>
+            </div>
+            
+            <div class="music-player">
+                <h3>🎵 Now Playing</h3>
+                <audio id="audio" controls>
+                    <source src="song1.mp3" type="audio/mpeg">
+                </audio>
+                <div class="playlist">
+                    <button class="song-btn" data-song="song1.mp3">No Flowers</button>
+                    <button class="song-btn" data-song="song2.mp3">I'd Find You Both</button>
+                    <button class="song-btn" data-song="song3.mp3">Funk do Die</button>
+                </div>
+            </div>
+            
+            <a href="https://tiny.cc/pwrschoollrs7" class="website-link" target="_blank">
+                My Website → tiny.cc/pwrschoollrs7
+            </a>
+        </div>
+    </div>
+    
+    <audio id="click-sound" src="click.mp3" preload="auto"></audio>
+    <audio id="hover-sound" src="hover.mp3" preload="auto"></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
