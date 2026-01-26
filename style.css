@@ -38,8 +38,8 @@ body {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    padding: 40px;
-    max-width: 500px;
+    padding: 30px;
+    max-width: 400px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     text-align: center;
     transition: transform 0.3s ease;
@@ -145,3 +145,4 @@ h1 {
     transform: scale(1.05);
     box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
 }
+
