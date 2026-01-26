@@ -82,11 +82,12 @@ document.querySelectorAll('button, a').forEach(el => {
 const audio = document.getElementById('audio');
 const songBtns = document.querySelectorAll('.song-btn');
 
-
 songBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         const song = btn.getAttribute('data-song');
+        audio.pause();
         audio.src = song;
-        audio.play();
+        audio.load();
+        audio.play().catch(e => console.log('Play error:', e));
     });
 });
