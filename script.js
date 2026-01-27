@@ -82,16 +82,29 @@ document.querySelectorAll('button, a').forEach(el => {
 const audio = document.getElementById('audio');
 const songBtns = document.querySelectorAll('.song-btn');
 const logo = document.querySelector('.logo');
+let currentButton = null;
 
 songBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         const song = btn.getAttribute('data-song');
         
-        // Remove active class from all buttons, add to clicked one
+        // If clicking the same song that's playing
+        if (currentButton === btn && !audio.paused) {
+            audio.pause();
+            return;
+        }
+        
+        // If clicking same song that's paused
+        if (currentButton === btn && audio.paused) {
+            audio.play();
+            return;
+        }
+        
+        // If clicking a different song
         songBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
+        currentButton = btn;
         
-        // Change song and play
         audio.pause();
         audio.src = song;
         audio.load();
@@ -99,7 +112,7 @@ songBtns.forEach(btn => {
     });
 });
 
-// Change logo to purple when music plays
+// Purple pulse when playing
 audio.addEventListener('play', () => {
     logo.classList.add('playing');
 });
@@ -116,4 +129,5 @@ audio.addEventListener('ended', () => {
 if (songBtns.length > 0) {
     songBtns[0].classList.add('active');
 }
+
 
