@@ -81,37 +81,39 @@ document.querySelectorAll('button, a').forEach(el => {
 // Music player
 const audio = document.getElementById('audio');
 const songBtns = document.querySelectorAll('.song-btn');
+const logo = document.querySelector('.logo');
 
 songBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         const song = btn.getAttribute('data-song');
+        
+        // Remove active class from all buttons, add to clicked one
+        songBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        // Change song and play
         audio.pause();
         audio.src = song;
         audio.load();
         audio.play().catch(e => console.log('Play error:', e));
-        // Playlist song switching
-const audio = document.getElementById('audio');
-const songButtons = document.querySelectorAll('.song-btn');
-
-songButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const songFile = button.getAttribute('data-song');
-        
-        // Remove active class from all buttons, add to the clicked one
-        songButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-        
-        // Change song and play it
-        audio.src = songFile;
-        audio.play().catch(error => {
-            console.log("Playback failed:", error);
-        });
     });
 });
 
-// Optional: make "Funk do Die" look selected when page loads (since it's currently playing)
-songButtons.forEach(btn => btn.classList.remove('active'));
-songButtons[songButtons.length - 1].classList.add('active');   // last button = Funk do Die
-    });
+// Change logo to purple when music plays
+audio.addEventListener('play', () => {
+    logo.classList.add('playing');
 });
+
+audio.addEventListener('pause', () => {
+    logo.classList.remove('playing');
+});
+
+audio.addEventListener('ended', () => {
+    logo.classList.remove('playing');
+});
+
+// Make first song look selected on page load
+if (songBtns.length > 0) {
+    songBtns[0].classList.add('active');
+}
 
