@@ -212,6 +212,19 @@ h1 {
     transform: scale(1.05);
     box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
 }
+.fade-title {
+    animation: fadeInOut 4s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
 
 
 
