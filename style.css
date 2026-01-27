@@ -108,6 +108,26 @@ body {
         opacity: 1;
     }
 }
+@keyframes purplePulse {
+    0%, 100% {
+        box-shadow: 
+            0 0 20px rgba(138, 43, 226, 0.8),
+            0 0 40px rgba(138, 43, 226, 0.6);
+        filter: brightness(1.2);
+        border-color: #8a2be2;
+    }
+    50% {
+        box-shadow: 
+            0 0 30px rgba(186, 85, 211, 1),
+            0 0 60px rgba(186, 85, 211, 0.8);
+        filter: brightness(1.5);
+        border-color: #ba55d3;
+    }
+}
+
+.logo.playing {
+    animation: purplePulse 1s infinite;
+}
 
 h1 {
     color: #333;
@@ -192,6 +212,7 @@ h1 {
     transform: scale(1.05);
     box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
 }
+
 
 
 
