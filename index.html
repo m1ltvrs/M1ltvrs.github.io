@@ -41,22 +41,53 @@
 
         </div>
     </div>
+<div class="bottom-player glass" id="player">
 
-  
-    <div class="bottom-player glass">
-        <div class="player-info">
-            <strong>Running Through My Head</strong>
-            <span> PLAY MUSIC </span>
+        <img src="quizzard-logo.png" alt="Album Art" class="player-art" id="track-art">
+
+        <div class="player-main">
+            <div class="player-info">
+                <span class="now-playing-label">Now Playing:</span>
+                <span class="track-title" id="track-title">Running Through My Head</span>
+                <span class="track-artist" id="track-artist">by SURGE HUB</span>
+            </div>
+
+            <div class="progress-row">
+                <span class="time-label" id="time-current">0:00</span>
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <span class="time-label" id="time-total">0:00</span>
+            </div>
         </div>
 
-        <audio id="audio" controls>
+        <div class="player-controls">
+            <button class="ctrl-btn" id="prev-btn" title="Restart">
+                <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+            </button>
+
+            <button class="ctrl-btn play-btn" id="play-btn" title="Play/Pause">
+                <svg id="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg id="pause-icon" viewBox="0 0 24 24" style="display:none"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+            </button>
+
+            <button class="ctrl-btn" id="next-btn" title="Restart">
+                <svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zM6 6l8.5 6L6 18z"/></svg>
+            </button>
+
+            <button class="ctrl-btn" id="repeat-btn" title="Loop">
+                <svg viewBox="0 0 24 24"><path d="M7 7h10v3l4-4-4-4v3H5v6h2zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2z"/></svg>
+            </button>
+
+            <button class="ctrl-btn" id="volume-btn" title="Mute/Unmute">
+                <svg id="vol-icon" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4z"/></svg>
+                <svg id="mute-icon" viewBox="0 0 24 24" style="display:none"><path d="M3 9v6h4l5 5V4L7 9H3zm13.59 3l2.7-2.71-1.41-1.41L15.17 12l-2.7-2.71-1.41 1.41L13.76 13l-2.7 2.71 1.41 1.41 2.7-2.71 2.7 2.71 1.41-1.41z"/></svg>
+            </button>
+        </div>
+
+        <audio id="audio">
             <source src="song3.mp3" type="audio/mpeg">
         </audio>
     </div>
-
-    <audio id="click-sound" src="842428__moulaythami__switch-038.wav" preload="auto"></audio>
-    <audio id="hover-sound" src="611451__eminyildirim__ui-click-menu-hover.wav" preload="auto"></audio>
-
-    <script src="script.js"></script>
-</body>
-</html>
+  
+    
