@@ -81,6 +81,16 @@ document.querySelectorAll('button, a').forEach(el => {
 const audio = document.getElementById('audio');
 const logo = document.querySelector('.logo');
 
+logo.addEventListener('click', () => {
+    logo.classList.remove('spin');
+    void logo.offsetWidth;
+    logo.classList.add('spin');
+});
+
+logo.addEventListener('animationend', () => {
+    logo.classList.remove('spin');
+});
+
 const playBtn = document.getElementById('play-btn');
 const playIcon = document.getElementById('play-icon');
 const pauseIcon = document.getElementById('pause-icon');
@@ -104,7 +114,7 @@ function formatTime(seconds) {
 
 function togglePlay() {
     if (audio.paused) {
-        audio.play().catch(e => console.log('Play error:', e));
+        audio.play().catch(e => console.error('Play error:', e));
     } else {
         audio.pause();
     }
@@ -116,20 +126,27 @@ audio.addEventListener('play', () => {
     playIcon.style.display = 'none';
     pauseIcon.style.display = '';
     logo.classList.add('playing');
+    document.body.classList.add('playing');
 });
 
 audio.addEventListener('pause', () => {
     playIcon.style.display = '';
     pauseIcon.style.display = 'none';
     logo.classList.remove('playing');
+    document.body.classList.remove('playing');
 });
 
 audio.addEventListener('ended', () => {
     logo.classList.remove('playing');
+    document.body.classList.remove('playing');
     if (!audio.loop) {
         playIcon.style.display = '';
         pauseIcon.style.display = 'none';
     }
+});
+
+audio.addEventListener('error', () => {
+    console.error('Audio failed to load. Check that song3.mp3 exists at the correct path.');
 });
 
 prevBtn.addEventListener('click', () => {
