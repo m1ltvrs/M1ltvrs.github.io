@@ -1,4 +1,3 @@
-﻿
 const canvas = document.getElementById('snow');
 const ctx = canvas.getContext('2d');
 
@@ -128,5 +127,3 @@ audio.addEventListener('ended', () => {
 if (songBtns.length > 0) {
     songBtns[0].classList.add('active');
 }
-
-
