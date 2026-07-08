@@ -1,9 +1,24 @@
 body {
-    background: #2b2b2b;
+    background: #000;
     margin: 0;
     font-family: Arial, sans-serif;
     color: white;
     overflow-x: hidden;
+    transition: background-color 0.3s ease;
+}
+
+body.playing {
+    animation: rgbFlash 4s linear infinite;
+}
+
+@keyframes rgbFlash {
+    0%   { background-color: #ff004c; }
+    16%  { background-color: #ff9900; }
+    33%  { background-color: #f4ff00; }
+    50%  { background-color: #00ff6a; }
+    66%  { background-color: #00c3ff; }
+    83%  { background-color: #a600ff; }
+    100% { background-color: #ff004c; }
 }
 
 #snow {
@@ -46,7 +61,25 @@ body {
 
 .logo {
     width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo.spin {
+    animation: spinLogo 0.8s ease-in-out;
+}
+
+@keyframes spinLogo {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
 }
 
 
