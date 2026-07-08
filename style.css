@@ -19,10 +19,6 @@ body {
 .container {
     position: relative;
     z-index: 1;
-}
-
-
-.container {
     display: flex;
     justify-content: center;
     align-items: center;
