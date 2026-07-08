@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,50 +8,55 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <canvas id="snow"></canvas>
-    
+
     <div class="container">
-        <div class="card">
+        <div class="card glass">
             <img src="quizzard-logo.png" alt="Quizzard Logo" class="logo">
-            
+
             <h1 class="fade-title">SURGE HUB TEAM</h1>
-            
+
             <div class="info">
-                <p>🔹 Full-Stack Developer specializing in .NET & React</p>
-                <p>🔹 Heavily fluent in html, javascript & css </p>   
+                <p>🔹 Full-Stack Developer (.NET & React)</p>
+                <p>🔹 Fluent in HTML, JavaScript & CSS</p>
             </div>
-            
-            <div class="music-player">
-                <h3>♫ MUSIC PLAYER (1 song) ♫ </h3>
-                <audio id="audio" controls>
-                    <source src="song3.mp3" type="audio/mpeg">
-                </audio>
-                <div class="playlist">
-                    <button class="song-btn" data-song="song3.mp3">Running through My Head</button>
-                </div>
-            </div>
-            
-            <a href="https://guns.lol/surgehub" class="website-link" target="_blank">
-                All My Links 🥳 → https://guns.lol/surgehub
-            </a>
+
+         
+<div class="button-menu">
+
+    <button class="menu-btn" onclick="window.open('https://guns.lol/surgehub', '_blank')">
+        📎 All My Links
+    </button>
+
+    <button class="menu-btn" onclick="window.open('https://surgehub.space', '_blank')">
+        ⚡ Surge Hub Main Site
+    </button>
+
+    <button class="menu-btn" onclick="window.open('https://discord.gg/surgehub', '_blank')">
+        🗨 Discord Server
+    </button>
+
+</div>
+
         </div>
     </div>
-    
+
+  
+    <div class="bottom-player glass">
+        <div class="player-info">
+            <strong>Running Through My Head</strong>
+            <span> PLAY MUSIC </span>
+        </div>
+
+        <audio id="audio" controls>
+            <source src="song3.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
     <audio id="click-sound" src="click.mp3" preload="auto"></audio>
     <audio id="hover-sound" src="hover.mp3" preload="auto"></audio>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
