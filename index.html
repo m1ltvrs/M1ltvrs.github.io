@@ -1,46 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PortFolio </title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌀</text></svg>">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <canvas id="snow"></canvas>
 
-    <canvas id="snow"></canvas>
+  <div class="container">
+    <div class="card glass">
+      <img src="quizzard-logo.png" alt="Quizzard Logo" class="logo" />
 
-    <div class="container">
-        <div class="card glass">
-            <img src="quizzard-logo.png" alt="Quizzard Logo" class="logo">
+      <h1 class="fade-title">About Me</h1>
 
-            <h1 class="fade-title">About Me</h1>
+      <div class="info">
+        <p>🔹 I am the Owner of the UBG site Singularity</p>
+        <p>🔹 Full-Stack Developer (.NET & JS)</p>
+        <p>🔹 Fluent in HTML, JavaScript & CSS</p>
+      </div>
 
-            <div class="info">
-                 <p>🔹 I am the Owner of the UBG site Singularity</p>
-                <p>🔹 Full-Stack Developer (.NET & React)</p>
-                <p>🔹 Fluent in HTML, JavaScript & CSS</p>
-            </div>
-
-         
-<div class="button-menu">
-
-    <button class="menu-btn" onclick="window.open('https://guns.lol/surgehub', '_blank')">
-        📎 All My Links
-    </button>
-
-    <button class="menu-btn" onclick="window.open('https://surgehub.space', '_blank')">
-        UBG ( unblocked games) Site
-    </button>
-
-    <button class="menu-btn" onclick="window.open('https://discord.gg/surgehub', '_blank')">
-        🗨 Discord Server
-    </button>
-
-</div>
-
-        </div>
+      <div class="button-menu">
+        <button class="menu-btn" onclick="openLink('https://guns.lol/surgehub')">📎 All My Links</button>
+        <button class="menu-btn" onclick="openLink('https://surgehub.space')">UBG Site</button>
+        <button class="menu-btn" onclick="openLink('https://discord.gg/surgehub')">🗨 Discord Server</button>
+      </div>
     </div>
+  </div>
 
-             
+  <audio id="click-sound" src="click.wav" preload="auto"></audio>
+  <audio id="hover-sound" src="hover.wav" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
