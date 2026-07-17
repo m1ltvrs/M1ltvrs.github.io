@@ -16,21 +16,28 @@
       <h1 class="fade-title">About Me</h1>
 
       <div class="info">
-        <p>🔹 I am the Owner of the UBG site Singularity</p>
+        <p>🔹 I am the Owner of the UBG site <a href="#" class="inline-link" onclick="openIframe('https://open-source-guns-lol-git-main-surgehub-1s-projects.vercel.app/'); return false;">Singularity</a></p>
         <p>🔹 Full-Stack Developer (.NET & JS)</p>
         <p>🔹 Fluent in HTML, JavaScript & CSS</p>
       </div>
 
       <div class="button-menu">
-        <button class="menu-btn" onclick="openLink('https://guns.lol/surgehub')">📎 All My Links</button>
+        <button class="menu-btn" onclick="openLink('https://guns.lol/s7ngularity')">📎 All My Links</button>
         <button class="menu-btn" onclick="openLink('https://surgehub.space')">UBG Site</button>
-        <button class="menu-btn" onclick="openLink('https://discord.gg/surgehub')">🗨 Discord Server</button>
+        <button class="menu-btn" onclick="openLink('https://discord.gg/bhDbvDA635')">🗨 Discord Server</button>
       </div>
     </div>
   </div>
 
   <audio id="click-sound" src="click.wav" preload="auto"></audio>
   <audio id="hover-sound" src="hover.wav" preload="auto"></audio>
+
+  <div id="iframe-overlay" class="iframe-overlay">
+    <div class="iframe-box glass">
+      <button class="iframe-close" onclick="closeIframe()">✕</button>
+      <iframe id="iframe-frame" src="" title="Embedded site"></iframe>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
