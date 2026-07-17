@@ -2,6 +2,20 @@ function openLink(url) {
   window.open(url, "_blank");
 }
 
+function openIframe(url) {
+  const overlay = document.getElementById("iframe-overlay");
+  const frame = document.getElementById("iframe-frame");
+  frame.src = url;
+  overlay.classList.add("active");
+}
+
+function closeIframe() {
+  const overlay = document.getElementById("iframe-overlay");
+  const frame = document.getElementById("iframe-frame");
+  overlay.classList.remove("active");
+  frame.src = ""; 
+}
+
 window.onload = () => {
   const canvas = document.getElementById("snow");
   const ctx = canvas.getContext("2d");
