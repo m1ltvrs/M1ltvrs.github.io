@@ -35,7 +35,9 @@ body {
   display: block;
   margin: 0 auto;
   width: 180px;
-  height: auto;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .menu-btn {
@@ -61,6 +63,17 @@ body {
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.info {
+  color: #ffffff;
+  text-align: left;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.info p {
+  margin: 6px 0;
 }
 
 .inline-link {
